@@ -7,8 +7,6 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: MONGO_URI
-        value: "mongodb+srv://phanikumar:phani369@cluster0.eoduv.mongodb.net/SpotifyDatabase?retryWrites=true&w=majority"
       - key: PORT
         value: 5000
 

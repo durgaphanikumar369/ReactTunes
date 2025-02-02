@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    if (!process.env.MONGO_URI) {
-      throw new Error('MongoDB URI is not defined in environment variables');
-    }
+    // Use default MongoDB URI if environment variable is not set
+    const mongoURI = "mongodb+srv://phanikumar:phani369@cluster0.eoduv.mongodb.net/SpotifyDatabase?retryWrites=true&w=majority";
 
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+    const conn = await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
