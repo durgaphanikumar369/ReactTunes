@@ -1,0 +1,22 @@
+services:
+  - name: react-tunes-server
+    type: web
+    env: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        value: "mongodb+srv://phanikumar:phani369@cluster0.eoduv.mongodb.net/SpotifyDatabase?retryWrites=true&w=majority"
+      - key: PORT
+        value: 5000
+
+  - name: client
+    type: web
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: ./client/build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://react-tunes-server.onrender.com 

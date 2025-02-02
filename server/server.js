@@ -30,7 +30,11 @@ connectDB();
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:5173'], // Allow both React dev servers
+    origin: [
+        'http://localhost:3000',
+        'http://localhost:5173',
+        'https://react-tunes.onrender.com'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
