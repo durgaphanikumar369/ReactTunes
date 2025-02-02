@@ -1,0 +1,45 @@
+.app {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+    background: #000000;
+  }
+  
+  .main-content {
+    grid-column: 2;
+    grid-row: 1;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, #3333cc, #121212);
+    color: white;
+    padding: 24px;
+  }
+  
+  .main-content::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .main-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .main-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    border: 3px solid #121212;
+  }
+  
+  .player {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    height: 90px;
+    background: #282828;
+    border-top: 1px solid #404040;
+  }
+  
+  .sidebar {
+    grid-column: 1;
+    grid-row: 1;
+    background: #000000;
+    color: white;
+  }
